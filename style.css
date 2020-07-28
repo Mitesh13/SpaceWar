@@ -13,8 +13,8 @@
     bottom: 0px;
     right:0;
     left:0;
-    /* height: 100vh;
-    width: 100vh; */
+    min-height: 100vh;
+    min-width: 100vh;
     background-color: black;
     z-index: 9999;
     /* transform: translate(-50%,-50%); */
