@@ -12,6 +12,15 @@ html,body
     overflow-y : hidden;
 }
 
+#loader
+{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3em;
+}
+
 .game-container
 {
     height:100vh;

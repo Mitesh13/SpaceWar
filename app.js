@@ -283,7 +283,7 @@ let startButton;
 document.onreadystatechange = function() { 
     if (document.readyState !== "complete") { 
         document.querySelector("body").style.visibility = "hidden"; 
-        // document.querySelector("#loader").style.visibility = "visible"; 
+        document.querySelector("#loader").style.visibility = "visible"; 
         
         startButton = document.createElement("button")
         startButton.setAttribute("class","start-btn")
@@ -294,7 +294,7 @@ document.onreadystatechange = function() {
             startButton.remove()
         })
     } else { 
-        // document.querySelector("#loader").style.display = "none"; 
+        document.querySelector("#loader").style.display = "none"; 
         document.querySelector("body").style.visibility = "visible"; 
         document.querySelector("body").style.maxHeight = "100vh"; 
         document.querySelector("body").style.height = "100vh"; 
