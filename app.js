@@ -4,6 +4,7 @@ const healthBar = document.querySelector(".filled-health-bar")
 const sshealthBar = document.querySelector(".filled-sshealth-bar")
 const body = document.getElementsByTagName("body")[0]
 const hero = document.querySelector(".hero")
+const screenWarning = document.querySelector(".screen-warning")
 
 let keysPressed = {}
 let ssHealth = 200
@@ -302,3 +303,35 @@ document.onreadystatechange = function() {
         
     } 
 };
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+console.log(isMobile.any())
+if(isMobile.any())
+{
+    screenWarning.style.display = "block"
+
+}
+else
+{
+    console.log("false");
+    screenWarning.style.display = "none"
+}
