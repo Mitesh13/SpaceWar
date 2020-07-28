@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+body
+{
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+.game-container
+{
+    height:100vh;
+    background-color: black;
+    
+}
+
+.game-stats
+{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 70px;
+    text-align: center;
+}
+
+.score-container
+{
+    display: flex;
+    flex-direction: column;
+    padding-top:20px;
+}
+
+.score{
+    font-size: 3em;
+}
+
+.health
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* position: absolute; */
+    margin-top: 20px;
+}
+
+.health-bar
+{
+    position: relative;
+    height: 200px;
+    width: 30px;
+    max-width: 30px;
+    max-height: 200px;
+    margin: 20px 20px;
+    border: 1px solid white;
+}
+.filled-health-bar,.filled-sshealth-bar
+{
+    background: lime;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-area
+{
+    border-left: 1px solid white;
+    margin-left: 70px;
+    height: 100%;
+}
+
+.hero,
+.enemy2
+{
+    position: absolute;
+    height:100px;
+    width: 100px;
+}
+
+.enemy2,
+.enemy1{
+    position: absolute;
+    height: 100px;
+    width: auto;
+    transform: rotateX(180deg);
+    top:0px;
+}
+.hero
+{
+    left: 50%;
+    transform: translate(-25%,0);
+    bottom: 0px;
+}
+.bullet{
+    position: absolute;
+    height:50px;
+    width: 50px;
+    transform: rotateZ(130deg);
+}
+
+.explosion
+{
+    position: absolute;
+    left:0;
+    top:0;
+    height:100px;
+    width: 100px;
+    
+}
+
+.game-over-text
+{
+    font-size: 8em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-45%,-50%);
+    z-index: 9999;
+    width: 80%;
+    /* height: 100%; */
+}
