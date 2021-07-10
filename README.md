@@ -5,5 +5,5 @@ Killing the enemies will increase the score.
 
 PS: Game works on bigger screens only.
 
-#Live Demo
+# Live Demo
 https://mitesh13.github.io/SpaceWar/
